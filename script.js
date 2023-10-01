@@ -1,4 +1,4 @@
-const proxy = ''; //https://corsproxy.io/?
+const proxy = 'https://corsproxy.io/?'; //
 const gifSrcInput = document.getElementById('gifSrc');
 const speedInput = document.getElementById('speed');
 const scaleInput = document.getElementById('scale');
