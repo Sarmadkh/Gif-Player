@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+    <title>Gif Player</title>
+	 <link rel="icon" href="icon.png" type="image/png">
+    <script src="webcomponents-loader.js"></script>
+    <script src="gif-player.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div id="container">
+      <div id="controls">
+        <div class="control-group">
+          <button id="resetButton" class="default">Reset</button>
+        </div>
+        <div class="control-group">
+          <label for="gifSrc">GIF Source:</label>
+          <input type="text" id="gifSrc" value="">
+        </div>
+        <div class="control-group">
+          <label for="speed">Speed: 1</label>
+          <input type="range" id="speed" min="0.25" max="2" step="0.25" value="1">
+        </div>
+        <div class="control-group">
+          <label for="scale">Image Scale: 1</label>
+          <input type="range" id="scale" min="0.25" max="2" step="0.25" value="1">
+        </div>
+        <div class="control-group">
+          <label for="rotation">Rotation: 0</label>
+          <input type="range" id="rotation" min="-180" max="180" step="10" value="0">
+        </div>
+        <div class="control-group">
+          <div class="direction-button-group">
+            <button id="backwardButton" class="direction-button">Backward</button>
+            <button id="forwardButton" class="direction-button active">Forward</button>
+          </div>
+        </div>
+        <div class="control-group">
+          <button id="bounceToggle" class="toggle-button">Bounce</button>
+        </div>
+      </div>
+      <div id="player-container">
+        <gif-player id="player" src="" speed="1" play direction="1"></gif-player>
+      </div>
+    </div>
+  </body>
+</html>
