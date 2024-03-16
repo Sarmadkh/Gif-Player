@@ -290,19 +290,19 @@
 
   </script>
   <script>
-    // Function to update the GIF source based on the URL hash
-    function updateGifSourceFromHash() {
-      const hash = window.location.hash;
-      if (hash) {
-        const gifSrc = hash.substring(1); // Remove the '#' character
-        const gifSrcInput = document.getElementById('gifSrc');
-        const player = document.getElementById('player');
+// Function to update the GIF source based on the URL hash
+function updateGifSourceFromHash() {
+	const hash = window.location.hash;
+	if (hash) {
+		const gifSrc = hash.substring(1); // Remove the '#' character
+		const gifSrcInput = document.getElementById('gifSrc');
+		const player = document.getElementById('player');
 
-        // Update the input field and player source
-        gifSrcInput.value = gifSrc;
-        player.setAttribute('src', gifSrc);
-      }
-    }
+		// Update the input field and player source
+		gifSrcInput.value = gifSrc;
+		player.setAttribute('src', proxy + gifSrc);
+	}
+}
 
     // Call the function when the page loads
     window.addEventListener('load', updateGifSourceFromHash);
@@ -311,7 +311,7 @@
     window.addEventListener('hashchange', updateGifSourceFromHash);
 
     // Rest of your JavaScript code here
-
+    const proxy = 'https://corsproxy.io/?'; //
     const gifSrcInput = document.getElementById('gifSrc');
     const speedInput = document.getElementById('speed');
     const scaleInput = document.getElementById('scale');
