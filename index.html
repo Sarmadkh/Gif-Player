@@ -37,6 +37,12 @@
 
             <div class="slider-controls">
                 <div class="slider-group">
+                    <label for="scaleSlider">Size:</label>
+                    <input type="range" id="scaleSlider" min="10" max="200" value="100" step="10" />
+                    <span id="scaleValue">100%</span>
+                </div>
+
+                <div class="slider-group">
                     <label for="speedSlider">Speed:</label>
                     <input type="range" id="speedSlider" min="0.25" max="4" value="1" step="0.25" />
                     <span id="speedValue">1x</span>
@@ -48,11 +54,6 @@
                     <span id="rotateValue">0°</span>
                 </div>
 
-                <div class="slider-group">
-                    <label for="scaleSlider">Size:</label>
-                    <input type="range" id="scaleSlider" min="10" max="200" value="100" step="10" />
-                    <span id="scaleValue">100%</span>
-                </div>
             </div>
 
             <div class="playback-info">
